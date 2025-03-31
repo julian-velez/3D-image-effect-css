@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #0a0a0a;
+}
+
+.gallery {
+    display: flex;
+     
+    gap: 60px; /* Espaciado entre imágenes */
+    align-items: center;
+}
+
+.image-container {
+    position: relative;
+    width: 320px;
+    perspective: 1200px; /* Profundidad 3D */
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.4);
+}
+
+.image-container:hover img {
+    transform: rotateX(50deg) rotateY(10deg) scale(1.1); /* Efecto de profundidad */
+    box-shadow: 0 40px 80px rgba(0, 255, 255, 0.7);
+}
